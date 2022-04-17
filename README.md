@@ -9,21 +9,22 @@ This is pre-production software and no warranty is provided in any way. User ass
 
 Python 3.8
 
-Tested in linux, likely works on Mac and Windows
+Tested mainly on Linux with Firefox
 
 Firefox or Chrome recommended
 
 ## Install
 
 ### Unix based systems (Linux, Mac)
-clone or download this repository
 
-open terminal and navigate to repository folder
+Clone or download this repository
 
-run the following commands:
+Open terminal and navigate to repository folder
+
+Run the following commands:
 
 ```bash
-python3.8 -m venv venv
+python -m venv venv
 
 source venv/bin/activate
 
@@ -37,7 +38,7 @@ python manage.py runserver
 
 Keep that terminal window open and open another. Once again navigate to the repository folder.
 
-run the following commands:
+Run the following commands:
 
 
 ```bash
@@ -54,4 +55,41 @@ Your folder for managing collections is located at [repository_folder]/src/media
 
 To view the web application, open [repository_folder]/offline-web/index.html in a browser.
 
-### Unix based systems (Linux, Mac)
+### Windows
+Clone or download this repository
+
+Open terminal and navigate to repository folder
+
+Run the following commands:
+
+```bash
+python -m venv venv
+
+venv\Scripts\activate
+
+pip install -r requirements.txt
+
+cd src
+
+python manage.py runserver
+
+```
+
+Keep that terminal window open and open another. Once again navigate to the repository folder.
+
+Run the following commands:
+
+
+```bash
+
+venv\Scripts\activate
+
+cd src
+
+python manage.py monitorfiles
+
+```
+
+Your folder for managing collections is located at [repository_folder]/src/media/
+
+To view the web application, open [repository_folder]/offline-web/index.html in a browser.
