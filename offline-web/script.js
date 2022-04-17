@@ -384,7 +384,6 @@ class App {
         // console.log(otherfile);
         // console.log(json_file.id);
         filesInParentItem[json_file.id].otherfiles[id] = otherfile
-      // console.log("start over penis");
       }
 
     });
