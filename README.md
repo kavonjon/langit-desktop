@@ -3,11 +3,11 @@ Desktop application component of langit
 
 ## Notice
 
-This is pre-production software and no warranty is provided in any way. User assumes full responsibility when using this software. Back up your data!
+This is pre-production software and no warranty is provided in any way. User assumes full responsibility when using this software. Backup your data!
 
 ## Prerequisites
 
-Python 3.8
+Requires Python 3.7-3.8
 
 Tested mainly on Linux with Firefox
 
