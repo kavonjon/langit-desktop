@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="img/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="https://icono-49d6.kxcdn.com/icono.min.css"> -->
+    <link rel="stylesheet" href="style.css" />
+    <title>langit</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img
+          src="img/logo.png"
+          alt="langit logo"
+          class="nav__logo"
+          id="logo"
+        />
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Search collection</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Help</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--btn btn--archive" href="#">&nbsp;&nbsp;Archive&nbsp;&nbsp;</a>
+          </li>
+          <li class="nav__item nav__settings">
+            <a class="nav__link" href="#">☰</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="nav__settings_menu hidden">
+      <ul class="settings__items">
+        <li class="settings__items__git_settings">
+          <a class="settings__link" href="#">git settings...</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="sidebar">
+        Collections
+        <button class="btn--show-ontop-new-collection">+</button>
+        <ul class="collections">
+
+        </ul>
+      </div>
+
+      <div class="content_container">
+        <div class="content content__collection">
+          <div class = "content_collection__contents">
+            <div class="collection__field collection__identifier">
+              <div>
+                Collection:
+              </div>
+              <input type="text" class="collection__input collection__identifier--value" />
+              <div class="collection__delete">
+                <button class="btn--collection__delete">&nbsp;&times;&nbsp;</button>
+              </div>
+            </div>
+            <div class="collection__itemlist">
+              <div class="collection__itemlist collection__itemlist__title">
+                Items in collection
+              </div>
+              <div>
+                <input type="text" class="itemlist__search" />
+                <button class="btn--itemlist__search__add">&nbsp;+&nbsp;</button>
+              </div>
+              <div class="collection__itemlist collection__itemlist__itemlist">
+                <ul class="items_in_collection">
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class = "content_collection__metadata">
+            <div class="collection__field collection__name">
+              <div>
+              Collection name:
+              </div>
+              <input type="text" class="collection__input collection__name--value" />
+            </div>
+            <div class="collection__field collection__description">
+              <div>
+              Description:
+              </div>
+              <input type="text" class="collection__input collection__description--value" />
+            </div>
+            <div class="collection__field collection__acquisition_info">
+              <div>
+              Acquisition information:
+              </div>
+              <input type="text" class="collection__input collection__acquisition_info--value" />
+            </div>
+            <div class="collection__field collection__scope">
+              <div>
+              Scope of contents:
+              </div>
+              <input type="text" class="collection__input collection__scope--value" />
+            </div>
+          </div>
+        </div>
+
+        <div class="content content__item hidden">
+          <div class = "content_item__contents">
+            <div class="item__field item__identifier">
+              <div>
+                Item:
+              </div>
+              <input type="text" class="item__input item__identifier--value" />
+              <div class="item__delete">
+                <button class="btn--item__delete">&nbsp;&times;&nbsp;</button>
+              </div>
+            </div>
+            <div class="item__field item__description">
+              <div>
+              Description:
+              </div>
+              <input type="text" class="item__input item__description--value" />
+            </div>
+            <div class="item__filelist">
+              <div class="item__filelist item__filelist__title">
+                Files in item
+              </div>
+              <div class="item__filelist__search__outer">
+                <input type="text" class="filelist__search" />
+                <button class="btn--filelist__search__add">&nbsp;+&nbsp;</button>
+              </div>
+              <div class="item__filelist item__filelist__filelist">
+                <ul class="files_in_item">
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class = "content_item__metadata">
+
+            <div class="item__field item__languages__outer">
+              Languages:
+              <div class="item__field item__languages">
+                <div class="item__field item__language" data-language="1">
+                  <div class="item__field item__language__number">
+                    1.
+                  </div>
+                  <div class="item__field item__language__name">
+                    Language name:
+                    <input type="text" class="item__input item__language__name--value" />
+                  </div>
+                  <div class="item__field item__language__code">
+                    ISO code/Glottocode:
+                    <input type="text" class="item__input item__language__code--value" />
+                  </div>
+                  <div class="item__field item__language__subject">
+                    Subject language?:
+                    <input type="checkbox" class="item__input item__language__subject--value" value="subject" />
+                  </div>
+                </div>
+              </div>
+              <button class="btn--item__languages__add">+</button>
+            </div>
+
+            <div class="item__field item__people__outer">
+              People:
+              <div class="item__field item__people">
+                <div class="item__field item__person" data-person="1">
+                  <div class="item__field item__person__number">
+                    1.
+                  </div>
+                  <div class="item__field item__person__name">
+                    <div>
+                      Name:
+                    </div>
+                    <div>
+                      <input type="text" class="item__input item__person__name--value" />
+                    </div>
+                  </div>
+                  <div class="item__field item__person__roles">
+                    <div>
+                      Roles
+                    </div>
+                    <div>
+                      <select name="item__person__roles--select" id="item__person__roles--select" multiple onchange="console.log(Array.from(this.selectedOptions).map(x=>x.value??x.text))" multiselect-hide-x="false">
+                        <option value="depositor">Depositor</option>
+                        <option value="speaker">Speaker</option>
+                        <option value="participant">Participant</option>
+                        <option value="researcher">Researcher</option>
+                        <option value="consultant">Consultant</option>
+                        <option value="interviewer">Interviewer</option>
+                        <option value="recorder">Recorder</option>
+                        <option value="author">Author</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn--item__people__add">+</button>
+            </div>
+            <div class="item__field item__region">
+              <div>
+                Region:
+              </div>
+              <div>
+                <input type="text" class="item__input item__region--value" />
+              </div>
+            </div>
+            <div class="item__field item__date_begin">
+              <div>
+                Beginning date:
+              </div>
+              <div>
+                <input type="text" class="item__input item__date_begin--value" />
+              </div>
+            </div>
+            <div class="item__field item__date_end">
+              <div>
+                Ending date:
+              </div>
+              <div>
+                <input type="text" class="item__input item__date_end--value" />
+              </div>
+            </div>
+            <div class="item__field item__linguistic_type">
+              <div>
+                Linguistic type:
+              </div>
+              <div>
+                <input type="text" class="item__input item__linguistic_type--value" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content content__file hidden">
+          <div class = "content_file__metadata">
+            <div class="file__field file__identifier">
+              <div>
+                File:
+              </div>
+              <div>
+                <input type="text" class="file__input file__identifier--value" />
+              </div>
+            </div>
+            <div class="file__field file__filename">
+              <div>
+                Filename:
+              </div>
+              <div>
+                <input type="text" class="file__input file__filename--value" />
+              </div>
+            </div>
+            <div class="file__field file__format">
+              <div>
+              Format:
+              </div>
+              <div>
+                <input type="text" class="file__input file__format--value" />
+              </div>
+            </div>
+            <div class="file__field file__extent">
+              <div>
+              Extent:
+              </div>
+              <div>
+                <input type="text" class="file__input file__extent--value" />
+              </div>
+            </div>
+            <div class="file__delete">
+              <button class="btn--file__delete">&nbsp;&times;&nbsp;</button>
+            </div>
+          </div>
+          <div class = "content_file__audio">
+            <div>
+              <audio controls class="file__audio">
+                <source src="horse.ogg" type="audio/ogg" class="file__audio_source">
+                <!-- <source src="horse.mp3" type="audio/mpeg"> -->
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class = "content_file__search">
+            <div>
+              Search annotations:&nbsp;
+              <input type="text" class="file__annotations__search file__search--value" />
+            </div>
+            <div class="file__search__tiers">
+            </div>
+            <div>
+              <button class="btn--file__annotations__export">Export annotations</button>
+            </div>
+          </div>
+          <div class = "content_file__annotations">
+            <ul class = "file__annotations_list">
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="content content__languages hidden">
+
+        </div>
+
+        <div class="content content__people hidden">
+
+        </div>
+
+
+        <div class="content item hidden">
+          cause it doesn't matter what's inside it
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+    </footer>
+
+    <div class="ontop ontop__git_settings hidden">
+      <button class="btn--close-ontop">&times;</button>
+      <h2 class="ontop__header">
+        git settings
+      </h2>
+      <h5>
+        Initialize git for new collections
+      </h5>
+      <label class="switch">
+        <input type="checkbox" class="ontop__git_settings__toggle">
+        <span class="slider round"></span>
+      </label>
+      <h5>
+        Name for git commits
+      </h5>
+      <div class="ontop__git_settings__name">
+        <input class="ontop__git_settings__name--value" placeholder="e.g. first name">
+        </input>
+      </div>
+      <h5>
+        Email for git commits
+      </h5>
+      <div class="ontop__git_settings__email">
+        <input class="ontop__git_settings__email--value" placeholder="name@example.com">
+        </input>
+      </div>
+    </div>
+    <div class="ontop ontop__new-collection hidden">
+      <button class="btn--close-ontop">&times;</button>
+      <h2 class="ontop__header">
+        Add a new collection
+      </h2>
+      <form class="ontop__form">
+        <label>Collection name</label>
+        <input class="form__input__new-collection--identifier" type="text" />
+        <button class="btn form__btn__new-collection">Add</button>
+      </form>
+    </div>
+    <div class="ontop ontop__pre-open hidden">
+      <button class="btn--close-ontop">&times;</button>
+      <h2 class="ontop__header">
+        Data file invalid
+      </h2>
+      <h3>
+        The local file for this collection/item/file does not contain data in a valid format
+      </h3>
+      <div class="ontop__form">
+        <span><button class="btn form__btn__pre-open-dont">Don't open</button></span>
+        <span><button class="btn form__btn__pre-open-overwrite">Overwrite file</button></span>
+      </div>
+    </div>
+    <div class="ontop ontop__export_annotations hidden">
+      <button class="btn--close-ontop">&times;</button>
+      <h2 class="ontop__header">
+        Export annotations
+      </h2>
+      <h5>
+        Specify a citation prefix
+      </h5>
+      <div class="ontop__export_annotations__prefix">
+        <input class="ontop__export_annotations__prefix--value" placeholder="Author last name, year">
+        </input>
+      </div>
+      <h5>
+        Choose the tiers you would like to include in this Latex export
+      </h5>
+      <div class="ontop__export_annotations__tiers">
+      </div>
+      <textarea class="ontop__export_annotations__annotations_output" rows="10"></textarea>
+    </div>
+
+    <div class="overlay hidden"></div>
+
+    <div class="tooltip tooltip__collection_list__collection hidden">
+      <div class="tooltip__collection_list__collection__collection">Collection:</div>
+      <div>Version control
+      <label class="switch">
+        <input type="checkbox" class="tooltip__collection_list__collection__git_toggle" data-id="">
+        <span class="slider round"></span>
+      </label></div>
+      <div class="tooltip__collection_list__collection__last_commit">Last commit:<br />
+      </div>
+      <div>
+        <button class="btn--tooltip__collection_list__collection__commit_now">Commit now</button>
+      </div>
+    </div>
+
+    <div class="tooltip tooltip__collection_list__file hidden">
+      <div class="tooltip__collection_list__file__file">File:</div>
+      <div>Archive
+      <label class="switch">
+        <input type="checkbox" class="tooltip__collection_list__file__archive_toggle" data-id="">
+        <span class="slider round"></span>
+      </label></div>
+      <div class="tooltip__collection_list__file__last_archive">Last deposit generated:<br />
+      </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <!-- <script type="module" src="http://localhost:8000/static/multiselect-dropdown.js" ></script> -->
+    <!-- <script defer src="multiselect-dropdown.js" ></script> -->
+
+
+  </body>
+</html>

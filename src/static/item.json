@@ -1,0 +1,23 @@
+{
+"langit_version": "0.1",
+"json_type": "item",
+"identifier": "",
+"languages" : {
+  "1" : {
+    "name" : "",
+    "code" : "",
+    "subject" : ""
+  }
+},
+"region_description" : "",
+"description" : "",
+"people" : {
+  "1" : {
+    "name" : "",
+    "roles" : []
+  }
+},
+"date_begin" : "",
+"date_end" : "",
+"linguistic_type" : ""
+}
